@@ -1,0 +1,7 @@
+Browser=chrome
+Url=https://naveenautomationlabs.com/opencart/index.php?route=account/login
+username=eddanapudir@gmail.com
+password=bmw23RIDE*
+headless=false
+incognito=false
+highlight=true
