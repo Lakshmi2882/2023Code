@@ -3,15 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.TestLayer.AccountPageTest">
+      <class name="com.qa.TestLayer.ProductPageTest">
         <methods>
-          <include name="verifyAccountBarList"/>
+          <include name="ProductInfoSetUp"/>
+          <include name="verifyProductImageCount"/>
           <include name="SetUp"/>
           <include name="tearDown"/>
-          <include name="AccountSetUp"/>
-          <include name="searchTest"/>
         </methods>
-      </class> <!-- com.qa.TestLayer.AccountPageTest -->
+      </class> <!-- com.qa.TestLayer.ProductPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -247,5 +247,10 @@ public String waitForTitleContains(String titleValue,int timeout)
 			}
 	return null;
 }
+public List<WebElement> waitForElementtobeVisible(By locator, int timeout)
+{WebDriverWait wait=new WebDriverWait(driver,timeout);
+return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
 
+	
+}
 }

@@ -27,8 +27,7 @@ public void SetUp()
 	prop= df.init_prop();
 	driver=df.Init_driver(prop);
 	login=new LoginPage(driver);
-	//account= new AccountPage(driver);
-	//product= new ProductPage(driver);
+	
 	
 	
 	

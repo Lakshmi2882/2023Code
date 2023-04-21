@@ -10,6 +10,8 @@ public class Constants {
 
 	public static final String Login_URL="opencart/index.php?route=account/login";
 	public static final String Account_Title="My Account";
+
+	public static final Object Product_Imagecount = 5;
 	public static List<String> AccountList()
 	{
 		ArrayList<String> al=new ArrayList<String>();

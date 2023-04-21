@@ -15,40 +15,40 @@ import com.qa.UtilPackage.Constants;
 
 public class AccountPageTest extends BaseTest {
 	 
-	 @BeforeTest
+	 @BeforeClass
    public void AccountSetUp()
    {  account=login.DoLogin(prop.getProperty("username").trim(),prop.getProperty("password").trim());
 	   
    }
-	@Test
+	@Test(priority=1)
 	public void  verifyAccountPageTitle()
 	{
 		String accTitle=account.AccountTitle();
 		Assert.assertEquals(accTitle,Constants.Account_Title);
 	}
-	@Test
+	@Test(priority=2)
 	public void verifyAccountsectionList()
 	{
 	List<String> ACSL=	account.AccountsectionList();
 	assertEquals(ACSL, Constants.AccountList());
 	}
-	@Test
+	@Test(priority=3)
 	public void verifyAccountsearchbar()
 	{
 		Assert.assertTrue(account.AccountsearchtextbarExist());
 	}
-	@Test
+	@Test(priority=4)
 	public void verifyAccountsearchIconExist()
 	{
 		Assert.assertTrue(account.AccountsearchtextbarExist());
 	}
-	@Test
+	@Test(priority=5)
 	public void verifyAccountRighthandsideList()
 	{
 	List<String> ARHL=account.AccountRighthandsidelist();
 	Assert.assertEquals(ARHL,Constants.RHListValues());
 	}
-	@Test
+	@Test(priority=6)
 	public void verifyAccountBarList() {
 		List<String> bar=account.getAccountPageBarList();
 		Assert.assertEquals(bar, Constants.Barlist());
@@ -64,10 +64,31 @@ public class AccountPageTest extends BaseTest {
 			
 			
 		}
-	@Test(dataProvider="ProductData")
+	@Test(priority=7,dataProvider="productData")
 	public void searchTest(String productName)
 	{
 	searchresult=	account.doSearchProduct(productName);
+	Assert.assertTrue(searchresult.ProductSearchCount()>0);
+	}
+	@DataProvider
+	public Object[][] productMainData()
+	{
+		return new Object[][]
+				{
+			{"iMac", "iMac"},
+			{"Apple", "Apple Cinema 30\""},
+			{"MacBook","MacBook"},
+				};
+				
+				
+				
+	}
+	@Test(priority=8, dataProvider="productMainData")
+	public void productresult(String Mainproductname, String productname)
+	{
+		 searchresult=account.doSearchProduct(productname);
+		product= searchresult.selectMainProduct(Mainproductname);
+		Assert.assertEquals(product.getProductHeader(),Mainproductname);
 	}
 	}
 

@@ -76,11 +76,8 @@ public SearchResultPage doSearchProduct(String ProductName)
 	util.doSendKeys(searchtextbar, ProductName);
 	util.doClick(searchIcon);
 	//return ProductPage(driver);
-	return SearchResultPage(driver);
+	return new SearchResultPage(driver);
 }
 
-private SearchResultPage SearchResultPage(WebDriver driver) {
-	// TODO Auto-generated method stub
-	return null;
-}
+
 }
