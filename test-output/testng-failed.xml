@@ -3,14 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.qa.TestLayer.ProductPageTest">
+      <class name="com.qa.TestLayer.LoginPageTest">
         <methods>
-          <include name="ProductInfoSetUp"/>
-          <include name="verifyProductImageCount"/>
+          <include name="verifyLoginPageURL"/>
+          <include name="verifyForgotLink"/>
+          <include name="verifyLoginPageTitle"/>
+          <include name="verifyRegisterLink"/>
           <include name="SetUp"/>
           <include name="tearDown"/>
+          <include name="verifydoLogin"/>
         </methods>
-      </class> <!-- com.qa.TestLayer.ProductPageTest -->
+      </class> <!-- com.qa.TestLayer.LoginPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

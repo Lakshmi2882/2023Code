@@ -1,5 +1,6 @@
 package com.qa.LoginPage;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -21,7 +22,7 @@ public class SearchResultPage {
 	}
 	public int ProductSearchCount()
 	{ 
-		int Productcount= util.waitForElementtobeVisible(Imagecount, 30).size();
+		int Productcount= util.waitForElementtobeVisible(Imagecount,10).size();
 		System.out.println(Productcount);
 		return Productcount;
 	}

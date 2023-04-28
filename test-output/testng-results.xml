@@ -1,85 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-04-21T09:06:42 BST" name="Default suite" finished-at="2023-04-21T09:08:58 BST" duration-ms="136765">
+  <suite started-at="2023-04-28T16:52:49 BST" name="Default suite" finished-at="2023-04-28T16:53:37 BST" duration-ms="47675">
     <groups>
     </groups>
-    <test started-at="2023-04-21T09:06:42 BST" name="Default test" finished-at="2023-04-21T09:08:58 BST" duration-ms="136765">
-      <class name="com.qa.TestLayer.ProductPageTest">
-        <test-method is-config="true" signature="SetUp()[pri:0, instance:com.qa.TestLayer.ProductPageTest@169e6180]" started-at="2023-04-21T09:06:42 BST" name="SetUp" finished-at="2023-04-21T09:06:45 BST" duration-ms="3795" status="PASS">
+    <test started-at="2023-04-28T16:52:49 BST" name="Default test" finished-at="2023-04-28T16:53:37 BST" duration-ms="47675">
+      <class name="com.qa.TestLayer.LoginPageTest">
+        <test-method is-config="true" signature="SetUp()[pri:0, instance:com.qa.TestLayer.LoginPageTest@1151e434]" started-at="2023-04-28T16:52:49 BST" name="SetUp" finished-at="2023-04-28T16:52:59 BST" duration-ms="9527" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetUp -->
-        <test-method is-config="true" signature="ProductInfoSetUp()[pri:0, instance:com.qa.TestLayer.ProductPageTest@169e6180]" started-at="2023-04-21T09:06:45 BST" name="ProductInfoSetUp" finished-at="2023-04-21T09:07:23 BST" duration-ms="38038" status="PASS">
+        <test-method signature="verifyLoginPageTitle()[pri:1, instance:com.qa.TestLayer.LoginPageTest@1151e434]" started-at="2023-04-28T16:52:59 BST" name="verifyLoginPageTitle" finished-at="2023-04-28T16:52:59 BST" duration-ms="27" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ProductInfoSetUp -->
-        <test-method signature="verifyProductHeader()[pri:1, instance:com.qa.TestLayer.ProductPageTest@169e6180]" started-at="2023-04-21T09:07:23 BST" name="verifyProductHeader" finished-at="2023-04-21T09:08:02 BST" duration-ms="38427" status="PASS">
+        </test-method> <!-- verifyLoginPageTitle -->
+        <test-method signature="verifyLoginPageURL()[pri:2, instance:com.qa.TestLayer.LoginPageTest@1151e434]" started-at="2023-04-28T16:52:59 BST" name="verifyLoginPageURL" finished-at="2023-04-28T16:52:59 BST" duration-ms="16" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyProductHeader -->
-        <test-method signature="verifyProductImageCount()[pri:2, instance:com.qa.TestLayer.ProductPageTest@169e6180]" started-at="2023-04-21T09:08:02 BST" name="verifyProductImageCount" finished-at="2023-04-21T09:08:58 BST" duration-ms="56446" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of all elements located by By.cssSelector: div.caption a (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'RAGHU', ip: '192.168.1.99', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\eddan\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58798}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d2cbe4516aec0b349f95f8074cf4f78f]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of all elements located by By.cssSelector: div.caption a (tried for 30 second(s) with 500 milliseconds interval)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'RAGHU', ip: '192.168.1.99', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 111.0.5563.147, chrome: {chromedriverVersion: 111.0.5563.64 (c710e93d5b63..., userDataDir: C:\Users\eddan\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58798}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: d2cbe4516aec0b349f95f8074cf4f78f
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-at com.qa.UtilPackage.ElementUtil.waitForElementtobeVisible(ElementUtil.java:252)
-at com.qa.LoginPage.SearchResultPage.ProductSearchCount(SearchResultPage.java:23)
-at com.qa.TestLayer.ProductPageTest.verifyProductImageCount(ProductPageTest.java:27)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        </test-method> <!-- verifyLoginPageURL -->
+        <test-method signature="verifyForgotLink()[pri:3, instance:com.qa.TestLayer.LoginPageTest@1151e434]" started-at="2023-04-28T16:52:59 BST" name="verifyForgotLink" finished-at="2023-04-28T16:52:59 BST" duration-ms="110" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyProductImageCount -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.TestLayer.ProductPageTest@169e6180]" started-at="2023-04-21T09:08:58 BST" name="tearDown" finished-at="2023-04-21T09:08:58 BST" duration-ms="0" status="PASS">
+        </test-method> <!-- verifyForgotLink -->
+        <test-method signature="verifyRegisterLink()[pri:4, instance:com.qa.TestLayer.LoginPageTest@1151e434]" started-at="2023-04-28T16:52:59 BST" name="verifyRegisterLink" finished-at="2023-04-28T16:52:59 BST" duration-ms="77" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyRegisterLink -->
+        <test-method signature="verifydoLogin()[pri:5, instance:com.qa.TestLayer.LoginPageTest@1151e434]" started-at="2023-04-28T16:52:59 BST" name="verifydoLogin" finished-at="2023-04-28T16:53:37 BST" duration-ms="37831" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifydoLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.TestLayer.LoginPageTest@1151e434]" started-at="2023-04-28T16:53:37 BST" name="tearDown" finished-at="2023-04-28T16:53:37 BST" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.TestLayer.ProductPageTest -->
+      </class> <!-- com.qa.TestLayer.LoginPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

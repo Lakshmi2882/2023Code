@@ -1,5 +1,6 @@
 package com.qa.UtilPackage;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -215,40 +216,41 @@ public void doActionsClick(By locator)
 	Actions act=new Actions(driver);
 	act.click(getElement(locator)).perform();
 }
-public Alert waitForAlert(int timeout)
+public Alert waitForAlert(Duration timeout)
 {
 	WebDriverWait wait=new WebDriverWait(driver, timeout);
 	return wait.until(ExpectedConditions.alertIsPresent());
 }
-public String getAlertText(int timeout)
+public String getAlertText(Duration timeout)
 {
 	String text=waitForAlert(timeout).getText();
 	acceptAlert(timeout);
 	return text;
 }
-public void acceptAlert(int timeOut)
+public void acceptAlert(Duration timeOut)
 {
 	waitForAlert(timeOut).accept();;
 }
-public void DismissAlert(int timeout)
+public void DismissAlert(Duration timeout)
 {
 	waitForAlert(timeout).dismiss();;
 }
-public void sendKeysOnAlert(int timeout,String value)
+public void sendKeysOnAlert(Duration timeout,String value)
 {
 	waitForAlert(timeout).sendKeys(value);
 }
 public String waitForTitleContains(String titleValue,int timeout)
 {
-	WebDriverWait wait=new WebDriverWait(driver,timeout);
+	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
 	if(wait.until(ExpectedConditions.titleContains(titleValue)))
 			{
 		return driver.getTitle();
 			}
 	return null;
 }
-public List<WebElement> waitForElementtobeVisible(By locator, int timeout)
-{WebDriverWait wait=new WebDriverWait(driver,timeout);
+public List<WebElement> waitForElementtobeVisible(By locator, int i)
+{
+	WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(20));
 return wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(locator));
 
 	
