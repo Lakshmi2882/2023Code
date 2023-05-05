@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="tests" name="Failed suite [Open Cart Regression Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="tests" name="Login Page Test(failed)">
+<suite name="Failed suite [Open Cart Regression Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Login Page Test(failed)">
     <classes>
       <class name="com.qa.TestLayer.LoginPageTest">
         <methods>
@@ -16,7 +16,7 @@
       </class> <!-- com.qa.TestLayer.LoginPageTest -->
     </classes>
   </test> <!-- Login Page Test(failed) -->
-  <test thread-count="5" parallel="tests" name="Accounts Page Test(failed)">
+  <test thread-count="5" name="Accounts Page Test(failed)">
     <classes>
       <class name="com.qa.TestLayer.AccountPageTest">
         <methods>
